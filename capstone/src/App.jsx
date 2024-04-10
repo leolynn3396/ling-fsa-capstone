@@ -3,15 +3,16 @@ import './App.css'
 import { capstoneProducts } from './data'
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(capstoneProducts)
-  return (
-    <>
-      <div>
-  
-      </div>
+  const [products, setProducts] = useState(capstoneProducts)
+  console.log(products)
 
-    </>
+  return (
+    <div>
+      {
+        products.map((product) => {
+          return <p>{product.title} {product.price} </p>
+        })}
+    </div>
   )
 }
 
